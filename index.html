@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Controle de Tickets</title>
+	<meta charset="UTF-8">
+	<script type="text/javascript" src="scripts/jquery.min.js"></script>
+	<script type="text/javascript" src="scripts/jquery.mask.js"></script>
+	<script type="text/javascript" src="scripts/bootstrap.min.js"></script>
+	<script type="text/javascript" src="scripts/script.js"></script>
+	<link rel="stylesheet" type="text/css" href="styles/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="styles/style.css">
+</head>
+<body>
+	<div id="controle_tickets" class="container-fluid">
+		<div class="row">
+			<div class="col">
+				<h4>Calculadora de horário</h4>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<p class="label label-item-form obrigatorio-item-form"><span>(*) </span>Campos obrigatórios</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col form-group group-item-form">
+				<label class="label-item-form" for="hora_entrada">Horário de entrada<span> * </span></label>
+				<input type="time" id="hora_entrada" name="hora_entrada" class="item-form">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col form-group group-item-form">
+				<label class="label-item-form" for="hora_saida_almoco">Horário de saída para almoço<span> * </span></label>
+				<input type="time" id="hora_saida_almoco" name="hora_saida_almoco" class="item-form">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col form-group group-item-form">
+				<label class="label-item-form" for="hora_entrada_almoco">Horário de entrada pós almoço<span> * </span></label>
+				<input type="time" id="hora_entrada_almoco" name="hora_entrada_almoco" class="item-form">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col form-group group-item-form">
+				<label class="label-item-form" for="hora_saida">Horário de saída</label>
+				<input type="time" id="hora_saida" name="hora_saida" class="item-form">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-4">
+				<input type="button" id="limpar" value="LIMPAR" class="btn-secundary-novo">
+			</div>
+
+			<div class="col-8">
+				<input type="button" id="calcular" value="CALCULAR" class="button-default-novo">
+			</div>
+		</div>
+		<div class="row mt-3">
+			<div class="col form-group group-item-form">
+				<label class="label-item-form" for="hora_total_almoco">Total de almoço</label>
+				<input type="time" id="hora_total_almoco" name="hora_total_almoco" class="item-form">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col form-group group-item-form">
+				<label class="label-item-form" for="hora_total">Total de horas (à fazer)</label>
+				<input type="time" id="hora_total" name="hora_total" class="item-form readonly" disabled="disabled">
+			</div>
+		</div>
+	</div>
+
+	<div class="modal-wait" style="display: none;"></div>
+	<div class="wait" style="display: none;">
+		<div class="loading"></div>
+		<div class="checkmark">
+			<div class="checkmark-stem"></div>
+			<div class="checkmark-kick"></div>
+		</div>
+	</div>
+</body>
+</html>
